@@ -51,6 +51,9 @@ make
 - `--key <file>`: HTTPS私钥文件路径
 - `--help`: 显示帮助信息
 
+## 项目框架
+![alt text](image.png)
+
 ## 项目结构
 
 ```
