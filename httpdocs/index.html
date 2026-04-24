@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PoorWebServer - C++ Web Server</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .feature {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #007acc;
+            background: #f9f9f9;
+        }
+        .code {
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        a {
+            color: #007acc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 PoorWebServer</h1>
+        <p>基于C++从零实现的工程级Web服务器</p>
+
+        <div class="feature">
+            <h3>✅ 核心特性</h3>
+            <ul>
+                <li>模块化架构设计（网络层、协议层、业务处理层）</li>
+                <li>基于Socket API的TCP服务器（RAII资源管理）</li>
+                <li>HTTP/1.1协议解析（GET/POST方法、Header解析）</li>
+                <li>线程池并发模型（避免每连接一线程问题）</li>
+                <li>OpenSSL HTTPS安全传输（TLS握手、证书验证）</li>
+                <li>CGI动态请求处理（fork/exec + 管道机制）</li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>🎯 测试链接</h3>
+            <ul>
+                <li><a href="/test.html">静态页面测试</a></li>
+                <li><a href="/post.html">POST表单测试</a></li>
+                <li><a href="/post.cgi">CGI脚本测试</a></li>
+            </ul>
+        </div>
+
+        <div class="feature">
+            <h3>💻 启动命令</h3>
+            <div class="code">
+# HTTP模式（默认端口8080）
+./myhttp
+
+# HTTPS模式
+./myhttp --https --cert server.crt --key server.key --port 8443
+
+# 自定义端口
+./myhttp --port 9000
+            </div>
+        </div>
+
+        <div class="feature">
+            <h3>🏗️ 设计模式</h3>
+            <ul>
+                <li><strong>RAII模式：</strong>Socket、SSL资源自动管理</li>
+                <li><strong>工厂模式：</strong>HttpResponse创建方法</li>
+                <li><strong>线程池模式：</strong>高效并发处理</li>
+                <li><strong>代理模式：</strong>SSLWrapper封装OpenSSL</li>
+            </ul>
+        </div>
+
+        <p style="text-align: center; margin-top: 30px; color: #666;">
+            基于C++17 + OpenSSL + POSIX Socket实现
+        </p>
+    </div>
+</body>
+</html>
